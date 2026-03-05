@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terminal Calculator</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="panel">
+        <h1>Terminal</h1>
+        <textarea
+          id="terminalInput"
+          placeholder="Paste snapshot here..."
+          rows="10"
+        ></textarea>
+        <div class="button-row">
+          <button id="parseBtn" type="button">Parse</button>
+          <button id="resetBtn" type="button">Reset</button>
+          <button id="templateBtn" type="button">Load Template</button>
+        </div>
+        <p id="error" class="error"></p>
+        <div class="summary">
+          <h2>Parsed Summary</h2>
+          <pre id="parsedSummary">No parsed data yet.</pre>
+        </div>
+      </section>
+
+      <section class="panel output-panel">
+        <h1>Calculator Output</h1>
+        <div id="metrics" class="metrics">Parse input to see results.</div>
+        <div id="verdict" class="verdict verdict-neutral">PASS</div>
+        <p id="explanation" class="explanation">Waiting for valid input.</p>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
